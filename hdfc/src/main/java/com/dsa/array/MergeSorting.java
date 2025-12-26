@@ -25,7 +25,6 @@ public class MergeSorting {
     }
 
     private static void conquer(int[] array, int startingIndex, int mid, int endingIndex) {
-        System.out.println(array);
         int[] newArray = new int[endingIndex - startingIndex + 1];
         int indexFirst = startingIndex;
         int indexSecond = mid + 1;
