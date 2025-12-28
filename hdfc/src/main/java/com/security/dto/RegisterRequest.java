@@ -1,14 +1,21 @@
-package com.example.jwtsecurity.dto;
+package com.security.dto;
 
+import com.security.entity.Role;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
+// Register Request
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 public class RegisterRequest {
     @NotBlank(message = "Username is required")
     @Size(min = 3, max = 20, message = "Username must be between 3 and 20 characters")
@@ -21,7 +28,6 @@ public class RegisterRequest {
     @NotBlank(message = "Password is required")
     @Size(min = 6, message = "Password must be at least 6 characters")
     private String password;
+    
+    private Set<Role> roles;
 }
-
-// Authentication Response DTO
-// Refresh Token Request DTO

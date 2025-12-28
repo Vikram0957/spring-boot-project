@@ -1,18 +1,20 @@
-package com.example.jwtsecurity.dto;
+package com.security.dto;
 
+import com.security.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
+
+// Authentication Response
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class AuthenticationResponse {
-    private String accessToken;
-    private String refreshToken;
+    private String token;
     private String username;
-    private String email;
-    private String role;
+    private Set<Role> roles;
 }

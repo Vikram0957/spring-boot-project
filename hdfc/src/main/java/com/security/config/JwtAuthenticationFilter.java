@@ -1,6 +1,6 @@
-package com.example.jwtsecurity.config;
+package com.security.config;
 
-import com.example.jwtsecurity.service.JwtUtility;
+import com.security.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -21,9 +21,9 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     
-    private final JwtUtility jwtService;
+    private final JwtService jwtService;
     private final UserDetailsService userDetailsService;
-
+    
     @Override
     protected void doFilterInternal(
             @NonNull HttpServletRequest request,
