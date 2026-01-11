@@ -1,4 +1,4 @@
-package com.streamapi.md;
+package com.core.streamapi.md;
 
 import java.util.*;
 import java.util.stream.*;
