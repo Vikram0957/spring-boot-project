@@ -20,7 +20,7 @@ public class AuthenticationService {
     
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final JwtService jwtService;
+    private final JwtUtisl jwtUtisl;
     private final AuthenticationManager authenticationManager;
     
     public AuthenticationResponse register(RegisterRequest request) {
@@ -49,7 +49,7 @@ public class AuthenticationService {
                 .build();
         
         userRepository.save(user);
-        String jwtToken = jwtService.generateToken(user);
+        String jwtToken = jwtUtisl.generateToken(user);
         
         return AuthenticationResponse.builder()
                 .token(jwtToken)
@@ -69,7 +69,7 @@ public class AuthenticationService {
         var user = userRepository.findByUsername(request.getUsername())
                 .orElseThrow(() -> new RuntimeException("User not found"));
         
-        var jwtToken = jwtService.generateToken(user);
+        var jwtToken = jwtUtisl.generateToken(user);
         
         return AuthenticationResponse.builder()
                 .token(jwtToken)

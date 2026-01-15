@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Service
-public class JwtService {
+public class JwtUtisl {
     
     @Value("${jwt.secret}")
     private String secret;

@@ -9,7 +9,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+      order_inserts: true
+      generate_statistics: true
+      jdbc:
+        batch_size: 1000
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
