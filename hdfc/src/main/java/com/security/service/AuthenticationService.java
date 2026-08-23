@@ -4,7 +4,7 @@ import com.security.dto.AuthenticationResponse;
 import com.security.dto.LoginRequest;
 import com.security.dto.RegisterRequest;
 import com.security.entity.Role;
-import com.security.entity.User;
+import com.security.entity.UserDetailsImpl;
 import com.security.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -36,8 +36,8 @@ public class AuthenticationService {
         if (roles == null || roles.isEmpty()) {
             roles = Set.of(Role.USER);
         }
-        
-        User user = User.builder()
+
+        UserDetailsImpl user = UserDetailsImpl.builder()
                 .username(request.getUsername())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))

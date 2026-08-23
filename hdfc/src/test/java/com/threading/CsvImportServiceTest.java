@@ -7,13 +7,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
-@Disabled
 class CsvImportServiceTest {
 
     @Autowired
     private CsvImportService service;
 
     @Test
+    @Disabled
     void dumpData() {
 
         long startTime = System.nanoTime();

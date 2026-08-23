@@ -1,6 +1,6 @@
 package com.security.service;
 
-import com.security.entity.User;
+import com.security.entity.UserDetailsImpl;
 import com.security.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -28,8 +28,8 @@ class CustomUserDetailsServiceTest {
 
         String username = "vikram";
 
-        Optional<User> user = Optional.of(
-                new User(
+        Optional<UserDetailsImpl> user = Optional.of(
+                new UserDetailsImpl(
                         1L,
                         username,
                         "password",
@@ -57,8 +57,8 @@ class CustomUserDetailsServiceTest {
 
         String username = "Dilip";
 
-        Optional<User> user = Optional.of(
-                new User(
+        Optional<UserDetailsImpl> user = Optional.of(
+                new UserDetailsImpl(
                         1L,
                         "Vikram",
                         "password",

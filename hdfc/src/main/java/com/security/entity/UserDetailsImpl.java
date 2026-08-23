@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User implements UserDetails {
+public class UserDetailsImpl implements UserDetails {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
