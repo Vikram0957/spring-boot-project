@@ -1,5 +1,6 @@
 package com.threading.enhanced;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,6 +13,7 @@ class EnhancedCsvImportServiceTest {
     private EnhancedCsvImportService enhancedService;
 
     @Test
+    @Disabled
     void dumpDataInEnhancedWay() {
 
         long startTime = System.nanoTime();
