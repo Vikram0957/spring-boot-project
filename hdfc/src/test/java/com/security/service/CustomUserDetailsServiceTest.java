@@ -18,7 +18,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class CustomUserDetailsServiceTest {
     @InjectMocks
-    private CustomUserDetailsService customUserDetailsService;
+    private UserDetailsServiceImpl customUserDetailsService;
 
     @Mock
     private UserRepository userRepository;
