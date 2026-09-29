@@ -16,7 +16,7 @@ public class LongestSubStringWithoutRepeatingCharacters {
     }
 
     private static int findLongestString(String s) {
-        Set<String> set = new HashSet();
+        Set<String> set = new HashSet<>();
         int maxLength = 0;
         String[] arr = s.split("");
         int size = arr.length;
@@ -28,7 +28,7 @@ public class LongestSubStringWithoutRepeatingCharacters {
                     length++;
                     maxLength = Math.max(maxLength, length);
                 } else {
-                    set = new HashSet();
+                    set = new HashSet<>();
                     continue Outer;
                 }
             }
@@ -37,7 +37,7 @@ public class LongestSubStringWithoutRepeatingCharacters {
     }
 
     public static int findLongestSubStringOptimized(String st) {
-        Set<String> set = new HashSet();
+        Set<String> set = new HashSet<>();
         int maxLength = 0;
         String[] arr = st.split("");
         int size = arr.length;
