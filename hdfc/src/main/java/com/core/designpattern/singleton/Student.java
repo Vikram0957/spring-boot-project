@@ -12,4 +12,19 @@ public class Student {
         }
         return s;
     }
+
+    // Safe for multi-threaded env
+    private volatile  static  Student student;
+
+    public Student getStudentSynchronized(){
+        if(student == null){
+            synchronized (String.class){
+                if(student == null){
+                    student = new Student();
+                    return student;
+                }
+            }
+        }
+        return student;
+    }
 }

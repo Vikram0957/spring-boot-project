@@ -1,14 +1,27 @@
 package com.core.streamapi.jcotd;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class SumAndAverage {
     public static void main(String[] args) {
-        List<Integer> list = List.of(34,65,23,12,89,56,41);
-        int sum = list.stream().mapToInt(Integer::intValue).sum();
-        System.out.println(sum);
+        int[] a = {26,74,45,34,19,62,53,45, 19};
+        List<Integer> b = List.of(26,74,45,34,19,62,53,45, 19);
+        String[] c = {"Java","is","a","is", "cat", "to", "a"};
+        String d = "Java is a programming language";
+        List<String> e = List.of("java","is","a","is", "cat", "to", "a","ok");
+        List<Character> f = List.of('a','c','a','d','a', 'c');
 
-        double average = list.stream().mapToDouble(Integer::intValue).average().getAsDouble();
-        System.out.println(average);
+        int l1 = b.stream().mapToInt(Integer::intValue).sum();
+        System.out.println("Sum of List : "+l1);
+
+        int l2 = Arrays.stream(a).boxed().mapToInt(Integer::intValue).sum();
+        System.out.println("Sum of Array : "+l2);
+
+        double l3 = b.stream().mapToInt(Integer::intValue).average().getAsDouble();
+        System.out.println("Average of List : "+l3);
+
+        double l4 = Arrays.stream(a).boxed().mapToInt(Integer::intValue).average().getAsDouble();
+        System.out.println("Average of Array : "+l4);
     }
 }
