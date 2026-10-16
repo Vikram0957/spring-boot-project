@@ -7,10 +7,8 @@ public class SumAndAverage {
     public static void main(String[] args) {
         int[] a = {26,74,45,34,19,62,53,45, 19};
         List<Integer> b = List.of(26,74,45,34,19,62,53,45, 19);
-        String[] c = {"Java","is","a","is", "cat", "to", "a"};
-        String d = "Java is a programming language";
-        List<String> e = List.of("java","is","a","is", "cat", "to", "a","ok");
-        List<Character> f = List.of('a','c','a','d','a', 'c');
+
+        System.out.println(Arrays.stream(a).count());
 
         int l1 = b.stream().mapToInt(Integer::intValue).sum();
         System.out.println("Sum of List : "+l1);

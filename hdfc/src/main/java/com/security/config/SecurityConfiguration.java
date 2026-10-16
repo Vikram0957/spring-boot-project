@@ -35,6 +35,7 @@ public class SecurityConfiguration {
                         .requestMatchers("/actuator/**").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         .requestMatchers("/api/moderator/**").hasAnyRole("ADMIN", "MODERATOR")
+                        .requestMatchers("/graphql").authenticated()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session
