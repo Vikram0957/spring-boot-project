@@ -1,6 +1,8 @@
 package com.micorservicesarch;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.persistence.Version;
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,7 @@ public class EmployeeService {
     @Autowired
     private WebClient webClient;
 
+    @Transactional
     public Employee saveEmployee(Employee employee){
         Employee save = repo.save(employee);
         return save;

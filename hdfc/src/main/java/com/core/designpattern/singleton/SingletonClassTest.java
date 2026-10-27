@@ -7,5 +7,10 @@ public class SingletonClassTest {
 
         System.out.println(s1);
         System.out.println(s2);
+
+        Student studentSynchronized1 = Student.getStudentSynchronized();
+        Student studentSynchronized2 = Student.getStudentSynchronized();
+        System.out.println(studentSynchronized1);
+        System.out.println(studentSynchronized2);
     }
 }

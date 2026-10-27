@@ -16,7 +16,7 @@ public class Student {
     // Safe for multi-threaded env
     private volatile  static  Student student;
 
-    public Student getStudentSynchronized(){
+    public static Student getStudentSynchronized(){
         if(student == null){
             synchronized (String.class){
                 if(student == null){
